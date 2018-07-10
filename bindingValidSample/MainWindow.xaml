@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:bindingValidSample"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="300" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -16,30 +16,56 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
-            
+            <RowDefinition Height="auto" />
         </Grid.RowDefinitions>
         
         <!--Heading Part-->
-        <TextBlock Grid.Row="0" Grid.Column="0" FontSize="30" HorizontalAlignment="Center" Margin="10,10,10,10">
+        <TextBlock Grid.Row="0" Grid.Column="0" FontSize="30" HorizontalAlignment="Center" Margin="5,5,5,5">
             Enter Details:
         </TextBlock>
-        <TextBlock Grid.Row="0" Grid.Column="1" FontSize="30" HorizontalAlignment="Center" Margin="10,10,10,10">
+        <TextBlock Grid.Row="0" Grid.Column="1" FontSize="30" HorizontalAlignment="Center" Margin="5,5,5,5">
             View Details:
         </TextBlock>
         
         <!--Entry Details:-->
-        <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Label FontSize="20" Target="{Binding ElementName=name}">Name:</Label>
-            <TextBox Name="name" VerticalAlignment="Center" Width="100" Margin="10"></TextBox>
+        <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center"
+                    Margin="5,5,5,5">
+            <Label FontSize="20" Target="{Binding ElementName=name}" Margin="5">Name</Label>
+            <TextBox Name="name" VerticalAlignment="Center" Width="100"></TextBox>
         </StackPanel>
 
-        <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Label FontSize="20" Target="{Binding ElementName=email}">Email:</Label>
-            <TextBox Name="email" VerticalAlignment="Center" Width="100" Margin="10"></TextBox>
+        <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center"
+                    Margin="5,5,5,5">
+            <Label FontSize="20" Target="{Binding ElementName=email}" Margin="5">Email</Label>
+            <TextBox Name="email" VerticalAlignment="Center" Width="100"></TextBox>
         </StackPanel>
 
-        <!--<Button Grid.Row="4" Grid.Column="0">Submit</Button>-->
+        <StackPanel Grid.Row="3" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center"
+                    Margin="5,5,5,5">
+            <Label FontSize="20" Target="{Binding ElementName=phone}" Margin="5">Phone</Label>
+            <TextBox Name="phone" VerticalAlignment="Center" Width="100"></TextBox>
+        </StackPanel>
+        
+        <Button Grid.Row="4" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"
+                FontSize="15" Margin="5,5,5,5" Padding="5,0">Submit</Button>
         
         <!--View Details-->
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center"
+                    Margin="5,5,5,5">
+            <Label FontSize="20" Target="{Binding ElementName=dispalyname}" Margin="5">Name</Label>
+            <TextBox Name="displayname" IsReadOnly="True" VerticalAlignment="Center" Width="100"></TextBox>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center"
+                    Margin="5,5,5,5">
+            <Label FontSize="20" Target="{Binding ElementName=dispalyemail}" Margin="5">Email</Label>
+            <TextBox Name="displayemail" IsReadOnly="True" VerticalAlignment="Center" Width="100"></TextBox>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center"
+                    Margin="5,5,5,5">
+            <Label FontSize="20" Target="{Binding ElementName=dispalyphone}" Margin="5">Phone</Label>
+            <TextBox Name="displayphone" IsReadOnly="True" VerticalAlignment="Center" Width="100"></TextBox>
+        </StackPanel>
     </Grid>
 </Window>

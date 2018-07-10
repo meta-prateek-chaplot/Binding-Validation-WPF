@@ -46,7 +46,7 @@
             <TextBox Name="phone" VerticalAlignment="Center" Width="100"></TextBox>
         </StackPanel>
         
-        <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+        <Button IsEnabled="False" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"
                 FontSize="15" Margin="5,5,5,5" Padding="5,0" Click="Button_Click">Submit</Button>
         
         <!--View Details-->

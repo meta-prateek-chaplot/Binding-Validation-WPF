@@ -77,7 +77,7 @@
                     Margin="5,5,5,5">
             <Label FontSize="20" Target="{Binding ElementName=phone}" Margin="5">Phone</Label>
             <!--Validation.ErrorTemplate="{StaticResource ValidationTemplate}"-->
-            <TextBox Name="phone" VerticalAlignment="Center" Width="100" Margin="10,0,0,0" Style="{StaticResource TextBoxInError}">
+            <TextBox Name="phone" VerticalAlignment="Center" Width="100" Style="{StaticResource TextBoxInError}">
                 <TextBox.Text>
                     <Binding Path="phone" Source="{StaticResource Ods}" UpdateSourceTrigger="PropertyChanged">
                         <Binding.ValidationRules>

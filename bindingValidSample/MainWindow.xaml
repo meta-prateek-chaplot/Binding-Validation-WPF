@@ -28,11 +28,11 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto" />
-            <RowDefinition Height="auto" />
-            <RowDefinition Height="auto" />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         
         <!--Heading Part-->
@@ -42,7 +42,7 @@
         <!--Entry Details:-->
         <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center"
                     Margin="5">
-            <Label FontSize="20" Target="{Binding ElementName=name}" Margin="5">Name</Label>
+            <Label FontSize="20" Margin="5">Name</Label>
             <TextBox Name="name" VerticalAlignment="Center" Width="100" Style="{StaticResource TextBoxInError}">
                 <TextBox.Text>
                     <Binding Path="name" Source="{StaticResource Ods}" UpdateSourceTrigger="PropertyChanged">
@@ -56,7 +56,7 @@
 
         <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center"
                     Margin="5">
-            <Label FontSize="20" Target="{Binding ElementName=email}" Margin="5">Email</Label>
+            <Label FontSize="20" Margin="5">Email</Label>
             <TextBox Name="email" VerticalAlignment="Center" Width="100" Style="{StaticResource TextBoxInError}">
                 <TextBox.Text>
                     <Binding Path="email" Source="{StaticResource Ods}" UpdateSourceTrigger="PropertyChanged">
@@ -70,8 +70,7 @@
 
         <StackPanel Grid.Row="3" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center"
                     Margin="5">
-            <Label FontSize="20" Target="{Binding ElementName=phone}" Margin="5">Phone</Label>
-            
+            <Label FontSize="20" Margin="5">Phone</Label>
             <TextBox Name="phone" VerticalAlignment="Center" Width="100" Style="{StaticResource TextBoxInError}">
                 <TextBox.Text>
                     <Binding Path="phone" Source="{StaticResource Ods}" UpdateSourceTrigger="PropertyChanged">
@@ -84,7 +83,7 @@
         </StackPanel>
         
         <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"
-                FontSize="15" Margin="5" Padding="5,0" Click="Button_Click">Submit
+                FontSize="15" Margin="5" Padding="5,0" Click="Submit_Click">Submit
             <Button.Style>
                 <Style TargetType="Button">
                     <Setter Property="IsEnabled" Value="False"/>
@@ -105,19 +104,19 @@
         <!--View Details-->
         <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center"
                     Margin="5">
-            <Label FontSize="20" Target="{Binding ElementName=dispalyname}" Margin="5">Name</Label>
+            <Label FontSize="20" Margin="5">Name</Label>
             <TextBox Name="displayname" IsReadOnly="True" VerticalAlignment="Center" Width="100" />
         </StackPanel>
 
         <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center"
                     Margin="5">
-            <Label FontSize="20" Target="{Binding ElementName=dispalyemail}" Margin="5">Email</Label>
+            <Label FontSize="20" Margin="5">Email</Label>
             <TextBox Name="displayemail" IsReadOnly="True" VerticalAlignment="Center" Width="100" />
         </StackPanel>
 
         <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center"
                     Margin="5">
-            <Label FontSize="20" Target="{Binding ElementName=dispalyphone}" Margin="5">Phone</Label>
+            <Label FontSize="20" Margin="5">Phone</Label>
             <TextBox Name="displayphone" IsReadOnly="True" VerticalAlignment="Center" Width="100" />
         </StackPanel>
     </Grid>

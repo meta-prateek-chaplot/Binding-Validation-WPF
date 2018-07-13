@@ -1,5 +1,7 @@
 ﻿// make local variable to be binded not other way around
-// remove trigger in event and declare in style triggers
+// remove trigger in event and declare in style triggers : make submit button disabled@start and enabled iff no error in textbox
+// use inbuilt validations for rangerules
+// exception handling
 
 using System.Windows;
 
@@ -12,7 +14,7 @@ namespace bindingValidSample
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Submit_Click(object sender, RoutedEventArgs e)
         {
             MyDataSource mds = (MyDataSource)this.TryFindResource("Ods");
             

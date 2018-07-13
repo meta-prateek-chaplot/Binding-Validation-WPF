@@ -1,33 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+﻿// make local variable to be binded not other way around
+// remove trigger in event and declare in style triggers
+
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Markup;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace bindingValidSample
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
-        string objName;
-        string objEmail;
-        string objPhone;
-
         public MainWindow()
         {
             InitializeComponent();
@@ -35,15 +14,12 @@ namespace bindingValidSample
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            // Fetching data from Entry Details
-            objName = name.Text;
-            objEmail = email.Text;
-            objPhone = phone.Text;
-
+            MyDataSource mds = (MyDataSource)this.TryFindResource("Ods");
+            
             // Providing data to View Details
-            displayname.Text = objName;
-            displayemail.Text = objEmail;
-            displayphone.Text = objPhone;
+            displayname.Text = mds.name;
+            displayemail.Text = mds.email;
+            displayphone.Text = mds.phone;
         }
     }
 }

@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="300" Width="750">
     <Window.Resources>
-        <local:MyDataSource x:Key="Ods" />
-        
+        <!--<local:MyDataSource x:Key="Mds" />-->
+
         <Style x:Key="TextBoxInError" TargetType="{x:Type TextBox}">
             <Style.Triggers>
                 <Trigger Property="Validation.HasError" Value="true">
@@ -45,7 +45,7 @@
             <Label FontSize="20" Margin="5">Name</Label>
             <TextBox Name="name" VerticalAlignment="Center" Width="100" Style="{StaticResource TextBoxInError}">
                 <TextBox.Text>
-                    <Binding Path="name" Source="{StaticResource Ods}" UpdateSourceTrigger="PropertyChanged">
+                    <Binding Path="name" UpdateSourceTrigger="PropertyChanged">
                         <Binding.ValidationRules>
                             <local:NameRangeRule />
                         </Binding.ValidationRules>
@@ -59,7 +59,7 @@
             <Label FontSize="20" Margin="5">Email</Label>
             <TextBox Name="email" VerticalAlignment="Center" Width="100" Style="{StaticResource TextBoxInError}">
                 <TextBox.Text>
-                    <Binding Path="email" Source="{StaticResource Ods}" UpdateSourceTrigger="PropertyChanged">
+                    <Binding Path="email" UpdateSourceTrigger="PropertyChanged">
                         <Binding.ValidationRules>
                             <local:EmailRangeRule />
                         </Binding.ValidationRules>
@@ -73,7 +73,7 @@
             <Label FontSize="20" Margin="5">Phone</Label>
             <TextBox Name="phone" VerticalAlignment="Center" Width="100" Style="{StaticResource TextBoxInError}">
                 <TextBox.Text>
-                    <Binding Path="phone" Source="{StaticResource Ods}" UpdateSourceTrigger="PropertyChanged">
+                    <Binding Path="phone" UpdateSourceTrigger="PropertyChanged">
                         <Binding.ValidationRules>
                             <local:PhoneRangeRule Min="6000000000" Max="9999999999" />
                         </Binding.ValidationRules>
@@ -82,9 +82,9 @@
             </TextBox>
         </StackPanel>
         
-        <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+        <Button x:Name="submitBtn" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"
                 FontSize="15" Margin="5" Padding="5,0" Click="Submit_Click">Submit
-            <Button.Style>
+            <!--<Button.Style>
                 <Style TargetType="Button">
                     <Setter Property="IsEnabled" Value="False"/>
                     <Style.Triggers>
@@ -98,7 +98,7 @@
                         </MultiDataTrigger>
                     </Style.Triggers>
                 </Style>
-            </Button.Style>
+            </Button.Style>-->
         </Button>
         
         <!--View Details-->
